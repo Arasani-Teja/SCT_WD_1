@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    <meta charset="UTF-8">
+    <title>SkillCraft Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        /* NAVBAR */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 40px;
+            background: rgba(0,0,0,0.3);
+            transition: 0.3s;
+            z-index: 1000;
+        }
+        header.scrolled {
+            background: black;
+        }        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav h2 {
+            color: white;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }        nav ul li a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }        nav ul li a:hover {
+            color: yellow;
+        }
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(
+                rgba(0,0,0,0.6),
+                rgba(0,0,0,0.6)
+            ),
+            url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+            margin-bottom: 25px;
+        }
+        .hero button {
+            padding: 14px 35px;
+            font-size: 16px;
+            border: none;
+            border-radius: 30px;
+            background: #ffd000;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .hero button:hover {
+            background: orange;
+        }
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<header id="navbar">
+    <nav>
+        <h2>SkillCraft</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+¬¬¬            <li><a href="#">Courses</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>Welcome to SkillCraft</h1>
+        <p>
+            SkillCraft helps you build real-world skills with hands-on learning,
+            expert guidance, and practical projects.
+        </p>
+        <button>Get Started</button>
+    </div>
+</section>
+<script>
+    window.addEventListener("scroll", function () {
+        document.getElementById("navbar")
+            .classList.toggle("scrolled", window.scrollY > 50); 
+    });
+</script>
+</body>
+</html>
